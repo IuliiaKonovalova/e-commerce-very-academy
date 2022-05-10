@@ -1,5 +1,5 @@
-def test_example():
-    assert True
+import pytest
+from selenium.webdriver.common.keys import Keys
 
-def test_example_2():
-    assert "Hello" == "Hello"
+@pytest.mark.selenium
+def test_dashboard_admin_login():
