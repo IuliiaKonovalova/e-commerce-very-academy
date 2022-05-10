@@ -1,8 +1,9 @@
 """Setting instance for the browser."""
 import pytest
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+# https://pypi.org/project/webdriver-manager/
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 @pytest.fixture(scope="module")
@@ -15,6 +16,9 @@ def chrome_browser_instance(request):
     options = Options()
     # set the running of the browser in the background
     options.headless = False
-    browser = webdriver.Chrome(chrome_options=options)
+    # set the browser to run in incognito mode
+    options.add_argument("--incognito")
+    # set the browser variable to the chrome browser
+    browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     yield browser
     browser.close()
