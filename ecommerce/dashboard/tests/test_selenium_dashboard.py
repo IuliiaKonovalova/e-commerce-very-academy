@@ -4,6 +4,11 @@ from selenium.webdriver.common.keys import Keys
 
 
 @pytest.mark.selenium
+def test_create_new_admin_user(create_admin_user):
+    assert create_admin_user.__str__() == "admin"
+
+
+@pytest.mark.selenium
 def test_dashboard_admin_login(
     live_server, chrome_browser_instance
 ):
