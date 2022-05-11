@@ -10,7 +10,7 @@ def test_create_new_admin_user(create_admin_user):
 
 @pytest.mark.selenium
 def test_dashboard_admin_login(
-    live_server, chrome_browser_instance
+    live_server, create_admin_user, chrome_browser_instance
 ):
     """Test for the login of the admin user."""
     browser = chrome_browser_instance
@@ -25,4 +25,4 @@ def test_dashboard_admin_login(
     user_password.send_keys("password")
     submit.send_keys(Keys.RETURN)
 
-    assert "Django administration" in browser.page_source
+    assert "Site administration" in browser.page_source
