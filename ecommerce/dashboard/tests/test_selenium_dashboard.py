@@ -14,8 +14,6 @@ def test_dashboard_admin_login(
     live_server, db_fixture_setup, chrome_browser_instance
 ):
     """Test for the login of the admin user."""
-    i = User.objects.get(id=1)
-    print(i.username)
     browser = chrome_browser_instance
 
     browser.get(("%s%s" % (live_server.url, "/admin/login/")))
