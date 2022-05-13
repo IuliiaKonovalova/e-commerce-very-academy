@@ -12,7 +12,7 @@
 
     `pip3 install pytest-django`
 
-    - [pytest-factoryboy](https://pypi.org/project/pytest-factoryboy/)
+    - [pytest-factoryboy](https://pypi.org/project/pytest-factoryboy/) to creating test data
 
     `pip3 install pytest-factoryboy`
 
