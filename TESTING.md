@@ -24,3 +24,7 @@
 
     `pip3 install webdriver-manager`
 
+
+
+python3 manage.py dumpdata inventory.category > new.json
+

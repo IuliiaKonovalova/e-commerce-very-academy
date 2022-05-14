@@ -1,5 +1,5 @@
 from django.db import models
-from django-utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey, TreeManyToManyField
 
 
@@ -11,7 +11,6 @@ class Category(MPTTModel):
         null=False,
         blank=False,
         unique=True,
-        blank=False,
         verbose_name=_('Category Name'),
         help_text=_("format: required, max-100")
     )
