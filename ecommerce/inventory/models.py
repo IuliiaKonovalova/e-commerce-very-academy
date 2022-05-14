@@ -37,3 +37,12 @@ class Category(MPTTModel):
         help_text=_("format: not required")
     )
 
+    class MPTTMeta:
+        order_insertion_by = ['name']
+
+    class Meta:
+        verbose_name = _('Product Category')
+        verbose_name_plural = _('Product Categories')
+
+    def __str__(self):
+        return self.name
