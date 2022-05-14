@@ -23,9 +23,9 @@ def test_inventory_category_dbfixture(
 @pytest.mark.parametrize(
     "slug, is_active",
     [
-        ("fashion", 1),
-        ("trainers", 1),
-        ("baseball", 1),
+        ("fashion1", 1),
+        ("trainers1", 1),
+        ("baseball1", 1),
     ],
 )
 def test_inventory_db_category_insert_data(
