@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     # Load applications
     'ecommerce.dashboard',
     'ecommerce.inventory',
-    'demo',
+    'ecommerce.demo',
     # External applications
     "mptt",
 ]
