@@ -81,7 +81,7 @@ class Product(models.Model):
         verbose_name=_('Product Description'),
         help_text=_("format: required, max-1000")
     )
-    
+
     is_active = models.BooleanField(
         default=False,
         unique=False,
@@ -109,3 +109,18 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Brand(models.Model):
+    """
+    Product brand table
+    """
+
+    name = models.CharField(
+        max_length=255,
+        unique=True,
+        null=False,
+        blank=False,
+        verbose_name=_("brand name"),
+        help_text=_("format: required, unique, max-255"),
+    )
