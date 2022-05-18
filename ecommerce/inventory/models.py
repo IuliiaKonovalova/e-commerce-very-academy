@@ -74,6 +74,14 @@ class Product(models.Model):
         verbose_name=_('Product safe URL'),
         help_text=_("format: required, letters, numbers, hyphens, underscores")
     )
+    description = models.TextField(
+        max_length=1000,
+        null=False,
+        blank=False,
+        verbose_name=_('Product Description'),
+        help_text=_("format: required, max-1000")
+    )
+    
     is_active = models.BooleanField(
         default=False,
         unique=False,
